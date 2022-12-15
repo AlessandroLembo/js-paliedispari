@@ -25,7 +25,16 @@ ANALISI:
 
 // 1 - Prendo gli elementi dalla pagina.
 const oddEvenElement = document.getElementById('odd-even');
+const userNumberElement = document.getElementById('user-number');
 const buttonElement = document.getElementById('button');
 const messageElement = document.getElementById('message');
-// console.log(oddEvenElement, buttonElement, messageElement);
+console.log(oddEvenElement, userNumberElement, buttonElement, messageElement);
 
+// 2 - Aggancio l'event listener al button.
+buttonElement.addEventListener('click', function(){
+     
+    // 3 - Inserisco un numero nel campo e lo salvo in variabile.
+    // const userNumber = 
+
+
+})
