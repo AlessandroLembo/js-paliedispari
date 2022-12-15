@@ -22,3 +22,10 @@ ANALISI:
 7 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
 8 - Stampo in pagina il messaggio.
 */
+
+// 1 - Prendo gli elementi dalla pagina.
+const oddEvenElement = document.getElementById('odd-even');
+const buttonElement = document.getElementById('button');
+const messageElement = document.getElementById('message');
+// console.log(oddEvenElement, buttonElement, messageElement);
+
