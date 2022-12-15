@@ -14,13 +14,14 @@ Dichiariamo chi ha vinto.
 ANALISI: 
 
 1 - Prendo gli elementi dalla pagina.
-2 - Aggancio l'event listener al button.
+2 - Aggancio l'event listener al button per inserire il numero dell'utente.
 3 - Inserisco un numero nel campo e lo salvo in variabile.
 4 - Controllo se ci sono caratteri non numerici e se i numeri sono compresi tra 1 e 5.
-4 - Dichiaro una funzione per generare un numero random per il computer.
-5 - Sommiamo i due numeri.
-6 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
-7 - Stampo in pagina il messaggio.
+5 - Aggancio l'event listener al button per generare un numero random per il pc.
+6 - Dichiaro una funzione per generare un numero random per il computer.
+7 - Sommiamo i due numeri.
+8 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
+9 - Stampo in pagina il messaggio.
 */
 
 // 1 - Prendo gli elementi dalla pagina.
@@ -34,42 +35,36 @@ const messageElement = document.getElementById('message');
 
 
 // 2 - Aggancio l'event listener al button per inserire il numero dell'utente.
-      buttonUserChoise.addEventListener('click', function(){
+buttonUserChoise.addEventListener('click', function(){
 
-      // 3 - Inserisco un numero nel campo e lo salvo in variabile.
-      const userChoise =  userNumberElement.value.trim();
+    // 3 - Inserisco un numero nel campo e lo salvo in variabile.
+    const userChoise =  userNumberElement.value.trim();
 
-      /* 4 - Controllo se ci sono caratteri non numerici
-             e se i numeri sono compresi tra 1 e 5.*/       
-      if (userNumberElement.value < 1 || userNumberElement.value > 5) {
-        alert('Inserisci un numero compreso tra 1 e 5');
-      }  else {
-        console.log(userChoise);
-        messageElement.innerText = userChoise;
-      }     
+    /* 4 - Controllo se ci sono caratteri non numerici
+           e se i numeri sono compresi tra 1 e 5.*/       
+    if (userNumberElement.value < 1 || userNumberElement.value > 5) {
+      alert('Inserisci un numero compreso tra 1 e 5');
+    }  else {
+      // console.log(userChoise);
+      // messageElement.innerText = userChoise;
+    }   
       
-      
-
-
-
 })
 
 
-// 2 - Aggancio l'event listener al button.
-buttonSumNumbers.addEventListener('click', function(){
-     
+// 5 - Aggancio l'event listener al button per generare un numero random per il pc.
+buttonRandomNumber.addEventListener('click', function(){
     
+    // 6 - Dichiaro una funzione per generare un numero random per il computer.
+    function getRandomNumber() {
+        const randomNumber = Math.floor(Math.random() * 5) + 1;
 
-    // 4 - Dichiaro una funzione per generare un numero random per il computer.
-    // function getRandomNumber() {
-    //     const randomNumber = Math.floor(Math.random() * 5) + 1;
+        return randomNumber;
+    }
 
-    //     return randomNumber;
-    // }
-
-    // const pcNumber = getRandomNumber();
+    const pcNumber = getRandomNumber();
     // console.log(pcNumber);
-
+    // messageElement.innerText = pcNumber;
 
 })
 
