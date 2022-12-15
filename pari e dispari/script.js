@@ -16,25 +16,58 @@ ANALISI:
 1 - Prendo gli elementi dalla pagina.
 2 - Aggancio l'event listener al button.
 3 - Inserisco un numero nel campo e lo salvo in variabile.
-4 - Controllo se ho inserito un numero e che sia compreso tra 1 e 5.
-5 - Dichiaro una funzione per generare un numero random per il computer.
-6 - Sommiamo i due numeri.
-7 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
-8 - Stampo in pagina il messaggio.
+4 - Dichiaro una funzione per generare un numero random per il computer.
+5 - Sommiamo i due numeri.
+6 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
+7 - Stampo in pagina il messaggio.
 */
 
 // 1 - Prendo gli elementi dalla pagina.
 const oddEvenElement = document.getElementById('odd-even');
 const userNumberElement = document.getElementById('user-number');
-const buttonElement = document.getElementById('button');
+const buttonUserChoise = document.getElementById('button-user');
+const buttonRandomNumber = document.getElementById('button-random');
+const buttonSumNumbers = document.getElementById('button-sum');
 const messageElement = document.getElementById('message');
-console.log(oddEvenElement, userNumberElement, buttonElement, messageElement);
+// console.log(oddEvenElement, userNumberElement, buttonUserChoise, buttonRandomNumber, buttonSumNumbers, messageElement);
 
-// 2 - Aggancio l'event listener al button.
-buttonElement.addEventListener('click', function(){
-     
-    // 3 - Inserisco un numero nel campo e lo salvo in variabile.
-    // const userNumber = 
+
+// 2 - Aggancio l'event listener al button per inserire il numero dell'utente.
+      buttonUserChoise.addEventListener('click', function(){
+
+      // 3 - Inserisco un numero nel campo e lo salvo in variabile.
+      const userChoise =  userNumberElement.value.trim();
+      // console.log(userChoise);
+      // messageElement.innerText = userChoise;
+
 
 
 })
+
+
+// 2 - Aggancio l'event listener al button.
+buttonSumNumbers.addEventListener('click', function(){
+     
+    
+
+    // 4 - Dichiaro una funzione per generare un numero random per il computer.
+    // function getRandomNumber() {
+    //     const randomNumber = Math.floor(Math.random() * 5) + 1;
+
+    //     return randomNumber;
+    // }
+
+    // const pcNumber = getRandomNumber();
+    // console.log(pcNumber);
+
+
+})
+
+// function getRandomNumber() {
+//     const randomNumber = Math.floor(Math.random() * 5) + 1;
+
+//     return randomNumber;
+// }
+
+// const pcNumber = getRandomNumber();
+// console.log(pcNumber);
