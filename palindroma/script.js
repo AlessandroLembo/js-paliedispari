@@ -18,8 +18,9 @@ ANALISI
 6 - Dichiaro una variabile d'appoggio.
 7 - Apro un ciclo per caricare di volta in volta le lettere della parola.
 8 - Salvo la parola invertita in una variabile.
-9 - Controllo se la parola è palindroma.
-10 - Stampo il messaggio in pagina. 
+9 - Dichiaro una variabile in cui inserisco il messaggio da stampare.
+10 - Controllo se la parola è palindroma.
+11 - Stampo il messaggio in pagina. 
 */
 
 
@@ -44,7 +45,7 @@ console.log ('Non inserire numeri e inserisci almeno 2 caratteri');
 
   /* 5 - Dichiaro una funzione in cui sviluppo la logica
          per ottenere la parola al contrario. */
-         function reverseWord(word){   
+         function reverseWord(){   
 
             // 6 -  Dichiaro una variabile d'appoggio.
             let result = '';
@@ -58,11 +59,23 @@ console.log ('Non inserire numeri e inserisci almeno 2 caratteri');
         }
     
     // 8 - Salvo la parola invertita in una variabile.
-    const reversedWord = reverseWord('');
+    const reversedWord = reverseWord();
     console.log(reversedWord); 
+    
+    // 9 - Dichiaro una variabile in cui inserisco il messaggio da stampare.
+    let message = '';
+
+    // 10 - Controllo se la parola inserita è palindroma.
+    if (valueElement === reversedWord ) {
+        // console.log('la parola inserita è palindroma');
+        message = 'la parola inserita è palindroma';
+    } else {
+        message = 'la parola non è palindroma';
+    }
+    
+    // 11 - Stampo in pagina.
+    messageElement.innerText = message;
 }
 
-// 9 - Controllo se la parola inserita è palindroma.
-      
 
 })
