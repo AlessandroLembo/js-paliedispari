@@ -16,6 +16,7 @@ ANALISI:
 1 - Prendo gli elementi dalla pagina.
 2 - Aggancio l'event listener al button.
 3 - Inserisco un numero nel campo e lo salvo in variabile.
+4 - Controllo se ci sono caratteri non numerici e se i numeri sono compresi tra 1 e 5.
 4 - Dichiaro una funzione per generare un numero random per il computer.
 5 - Sommiamo i due numeri.
 6 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
@@ -37,8 +38,17 @@ const messageElement = document.getElementById('message');
 
       // 3 - Inserisco un numero nel campo e lo salvo in variabile.
       const userChoise =  userNumberElement.value.trim();
-      // console.log(userChoise);
-      // messageElement.innerText = userChoise;
+
+      /* 4 - Controllo se ci sono caratteri non numerici
+             e se i numeri sono compresi tra 1 e 5.*/       
+      if (userNumberElement.value < 1 || userNumberElement.value > 5) {
+        alert('Inserisci un numero compreso tra 1 e 5');
+      }  else {
+        console.log(userChoise);
+        messageElement.innerText = userChoise;
+      }     
+      
+      
 
 
 
