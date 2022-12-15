@@ -30,8 +30,10 @@ const userNumberElement = document.getElementById('user-number');
 const buttonUserChoise = document.getElementById('button-user');
 const buttonRandomNumber = document.getElementById('button-random');
 const buttonSumNumbers = document.getElementById('button-sum');
+const numberUserElement = document.getElementById('number-user');
+const numberPcElement = document.getElementById('number-pc');
 const messageElement = document.getElementById('message');
-// console.log(oddEvenElement, userNumberElement, buttonUserChoise, buttonRandomNumber, buttonSumNumbers, messageElement);
+// console.log(oddEvenElement, userNumberElement, buttonUserChoise, buttonRandomNumber, buttonSumNumbers, numberUserElement, numberPcElement, messageElement);
 
 
 // 2 - Aggancio l'event listener al button per inserire il numero dell'utente.
@@ -53,7 +55,7 @@ buttonUserChoise.addEventListener('click', function(){
     const resultUser = `Il numero scelto dall'utente è ${userNumberElement.value} ed è ${userNumber}`;
 
     console.log(resultUser);
-    messageElement.innerHTML = resultUser;
+    numberUserElement.innerHTML = resultUser;
         
 
     // 5 - Aggancio l'event listener al button per generare un numero random per il pc.
@@ -72,29 +74,19 @@ buttonUserChoise.addEventListener('click', function(){
         
         const resultPc = `Il numero generato dal Pc è ${randomNumber} ed è ${pcNumber}`;
         console.log(resultPc);
-
-
+        numberPcElement.innerHTML = resultPc;
 
         return randomNumber;
     }
 
     const resultPc = getRandomNumber();
-
+    
     /* 7 - Aggancio l'event listener al button per 
            calcolare somma e stampare il messaggio*/
     buttonSumNumbers.addEventListener('click', function(){
         const sumNumbers = parseInt(resultUser) + parseInt(resultPc);
         console.log(sumNumbers); 
-
-        // 8 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
-        function isEven(n){
-           let result = false;
-           
-           if(number % 2 === 0)
-
-
-           return result;
-        }
+       
     })
     
       
