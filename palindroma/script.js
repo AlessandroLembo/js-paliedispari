@@ -18,3 +18,9 @@ ANALISI
 6 - Controllo se la parola inserita sia palindroma.
 7 - Stampo il messaggio in pagina. 
 */
+
+// 1 - Prendo gli elementi dalla pagina.
+const wordElement = document.getElementById('word');
+const buttonElement = document.getElementById('button');
+const messageElement = document.getElementById('message');
+// console.log(wordElement, buttonElement, messageElement);
