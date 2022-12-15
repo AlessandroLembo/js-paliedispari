@@ -54,7 +54,7 @@ console.log ('Non inserire numeri e inserisci almeno 2 caratteri');
             for (let i = valueElement.length - 1; i >= 0; i--){
                  result += valueElement[i];
             }
-        
+            
             return result;
         }
     
