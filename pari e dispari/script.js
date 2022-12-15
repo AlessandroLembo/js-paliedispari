@@ -41,13 +41,19 @@ buttonUserChoise.addEventListener('click', function(){
     const userChoise =  userNumberElement.value.trim();
 
     /* 4 - Controllo se ci sono caratteri non numerici
-           e se i numeri sono compresi tra 1 e 5.*/       
+           e se i numeri sono compresi tra 1 e 5.*/
+    let userNumber = "e' dispari";   
+
     if (userNumberElement.value < 1 || userNumberElement.value > 5) {
       alert('Inserisci un numero compreso tra 1 e 5');
-    }  else {
-      console.log(userChoise);
-      // messageElement.innerText = userChoise;
+    }  else if (userNumberElement.value % 2 === 0){
+        userNumber = "è pari";
     } 
+
+    const resultUser = userNumber;
+    console.log(resultUser);
+
+    
     
     // 5 - Aggancio l'event listener al button per generare un numero random per il pc.
     buttonRandomNumber.addEventListener('click', function(){
@@ -63,12 +69,21 @@ buttonUserChoise.addEventListener('click', function(){
     console.log(pcNumber);
     // messageElement.innerText = pcNumber;
 
-    // 7 - Aggancio l'event listener al button per sommare i due numeri.
+    /* 7 - Aggancio l'event listener al button per 
+           calcolare somma e stampare il messaggio*/
     buttonSumNumbers.addEventListener('click', function(){
         const sumNumbers = parseInt(userChoise) + parseInt(pcNumber);
         console.log(sumNumbers); 
 
-        
+        // 8 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
+        function isEven(n){
+           let result = false;
+           
+           if(number % 2 === 0)
+
+
+           return result;
+        }
     })
     
       
