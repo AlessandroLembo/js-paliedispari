@@ -18,8 +18,9 @@ ANALISI:
 3 - Inserisco un numero nel campo e lo salvo in variabile.
 4 - Controllo se ci sono caratteri non numerici e se i numeri sono compresi tra 1 e 5.
 5 - Dichiaro una funzione per generare un numero random per il computer.
-6 - Dichiaro una funzione per controllare se la somma è pari o dispari. 
-7 - Stampo in pagina il messaggio.
+6 - Somma dei numeri.
+7 - Dichiaro una funzione per controllare qual è stata la scelta vincente.
+8 - Stampo in pagina il vincitore.
 */
 
 // 1 - Prendo gli elementi dalla pagina.
@@ -76,12 +77,26 @@ buttonSumNumbers.addEventListener('click', function(){
         return randomNumber;
     }
 
+
+    // 6 - Somma dei numeri.
     const resultPc = getRandomNumber();
     
     const sum = resultPc + userNumberChoise;
-    console.log(sum);
 
 
+    // 7 - Dichiaro una funzione per controllare qual è stata la scelta vincente.
+    function isEven(n){
+       if(n % 2 === 0){
+        return true;
+       } else {
+        return false;
+       }
+    }
+
+    const winnerChoise = isEven(sum) ? 'pari' : 'dispari';
+    console.log(`Vince chi ha scelto ${winnerChoise}`);
+
+    // 8 - Stampo in pagina il vincitore.
     
     
 
