@@ -81,13 +81,7 @@ buttonUserChoise.addEventListener('click', function(){
 
     const resultPc = getRandomNumber();
     
-    /* 7 - Aggancio l'event listener al button per 
-           calcolare somma e stampare il messaggio*/
-    buttonSumNumbers.addEventListener('click', function(){
-        const sumNumbers = parseInt(resultUser) + parseInt(resultPc);
-        console.log(sumNumbers); 
-       
-    })
+   
     
       
 })
